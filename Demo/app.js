@@ -77,18 +77,18 @@
 
 // objects:
 
-const user = {
-    firstName: "yazan",
-    course: "py",
-    age: 24,
-    loveCoffe: true,
-    favFood: ["mansaf", "pizza","stake"],
-    greeting: function() {
-        console.log("welcome yazan" + this.firstName);
-        //console.log(this);
+// const user = {
+//     firstName: "yazan",
+//     course: "py",
+//     age: 24,
+//     loveCoffe: true,
+//     favFood: ["mansaf", "pizza","stake"],
+//     greeting: function() {
+//         console.log("welcome yazan" + this.firstName);
+//         //console.log(this);
 
-    }
-}
+//     }
+// }
 
 // console.log(user);
 
@@ -151,13 +151,9 @@ const user = {
 
 
 //This:  refer to the place which inside of it
-console.log(this);
-user.greeting();
+// console.log(this);
+// user.greeting();
 
 
-console.log(`this is ${user.firstName} from ${user.course} course . `)
-
-
-
-
+// console.log(`this is ${user.firstName} from ${user.course} course . `)
 
