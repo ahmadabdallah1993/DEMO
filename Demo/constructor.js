@@ -25,12 +25,16 @@ function User(nameValue, courseValue, ageValue, lovingCoffeeValue, favFoodValue)
     this.age = ageValue;
     this.loveCoffe = lovingCoffeeValue;
     this.favFood = favFoodValue;
-    this.greeting = function() {
-        console.log("welcome " + this.firstName);
-    };
+    // this.greeting = function() {
+    //     console.log("welcome " + this.firstName);
+    // };
     // console.log("this keyword -->" , this);
 
     allUsers.push(this);
+}
+
+User.prototype.greeting = function() {
+    console.log("welcome " + this.firstName);
 }
 
 
@@ -48,6 +52,11 @@ function User(nameValue, courseValue, ageValue, lovingCoffeeValue, favFoodValue)
 const yazan = new User("yazan","py",24,false,["mansaf", "pizza"]);
 const sh = new User("sh", "js", 22, true, ["maftool", "burger"]);
 const ba = new User("ba", "java", 20, false);
+
+
+// to call prototype:
+ba.greeting();
+sh.greeting();
 
 
 sh["major"] = "Ai";
@@ -91,5 +100,33 @@ console.log("---------ages----------");
 for(let i = 0; i < allUsers.length; i ++) {
     console.log(allUsers[i].age);
 }
+
+
+
+
+
+
+
+//----------------------------
+
+
+
+
+//prototype:
+
+// it help me to add a method for the constructor but not for all the users that i want to create
+
+// it is like choosing to which userer i want to add this method
+
+
+
+
+
+
+
+
+
+
+
 
 
