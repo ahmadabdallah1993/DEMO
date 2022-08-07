@@ -1,7 +1,8 @@
 'use strict';
 
+const bodyEl = document.getElementById('b');
 
-const body = document.getElementsByTagName('body');
+//const body = document.getElementsByTagName('body');
 
 const allDrinks = [];
 
@@ -15,22 +16,53 @@ function Drinks( name, ingredients, image, cold, hot, price) {
 
     allDrinks.push(this);
 };
-document.write(`<h1>Welcome to asac coffe house</h1>`);
+// document.write(`<h1>Welcome to asac coffe house</h1>`);
+
+const h1El = document.createElement('h1');
+
+h1El.textContent = "Welcome to asac coffe house";
+
+b.appendChild(h1El);
+
+
+
 Drinks.prototype.printMenue = function() {
 //console.log(`${this.name} : ${this.price} JD`);
 
-
-const pE1 = document.createElement('p');
-pE1.textContent = `Drink name : ${this.name} : ${this.price}`;
-
-body[0].appendChild(pE1);
+const pEl = document.createElement('p');
+pEl.textContent = `type name : ${this.name} : price : ${this.price}`;
+b.appendChild(pEl);
 
 
 
-const imgE1 = document.createElement('img');
-imgE1.src = this.image;
-imgE1.alt = this.name;
-body[0].appendChild(imgE1);
+const imgEl = document.createElement('img');
+imgEl.src=`${this.image}`;
+imgEl.alt=`${this.name}`;
+b.appendChild(imgEl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const pE1 = document.createElement('p');
+// pE1.textContent = `Drink name : ${this.name} : ${this.price}`;
+
+// body[0].appendChild(pE1);
+
+
+
+// const imgE1 = document.createElement('img');
+// imgE1.src = this.image;
+// imgE1.alt = this.name;
+// body[0].appendChild(imgE1);
 
 
 // document.write(`<p>${this.name} : ${this.price} JD</p>`)
