@@ -29,16 +29,31 @@ b.appendChild(h1El);
 Drinks.prototype.printMenue = function() {
 //console.log(`${this.name} : ${this.price} JD`);
 
+const divEl = document.createElement('div');
+b.appendChild(divEl);
+
+
 const pEl = document.createElement('p');
 pEl.textContent = `type name : ${this.name} : price : ${this.price}`;
-b.appendChild(pEl);
+divEl.appendChild(pEl);
 
 
 
 const imgEl = document.createElement('img');
 imgEl.src=`${this.image}`;
 imgEl.alt=`${this.name}`;
-b.appendChild(imgEl);
+divEl.appendChild(imgEl);
+
+
+const ulEl = document.createElement('ul');
+divEl.appendChild(ulEl);
+
+for (let i = 0; i < this.ingredients.length; i++) {
+    let liEl = document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent = this.ingredients[i];
+    
+}
 
 
 
