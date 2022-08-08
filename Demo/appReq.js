@@ -76,8 +76,64 @@ let espresso = new Drinks("espresso", ["coffie","sugar"], "./assets/Espresso.jpg
 console.log(allDrinks);
 
 
-americano.printMenue();
-espresso.printMenue();
+
+
+
+
+
+// americano.printMenue();
+// espresso.printMenue();
+
+
+for (let i = 0; i < allDrinks.length; i++) {
+      allDrinks[i].printMenue();
+    }
+
+
+
+
+//where
+let formEl = document.getElementById('form');
+
+//submit
+
+//
+formEl.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    let name = event.target.drinkName.value;
+    let ingredients = event.target.ingredients.value;
+    let img = event.target.img.value;
+    let price = event.target.price.value;
+
+    let cold = event.target.cold.checked;  //if it is checked he will return for us true
+
+    let hot = event.target.hot.checked;
+
+    console.log(name, ingredients, img, price, cold, hot)
+
+    let newDrink = new Drinks(name, ingredients, img, cold, hot, price);
+
+
+    newDrink.printMenue();
+
+    console.log(allDrinks);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 console.log(document)
